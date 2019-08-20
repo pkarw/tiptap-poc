@@ -132,13 +132,14 @@
     </editor-menu-bar>
 
     <editor-content class="editor__content" :editor="editor" />
+    {{ json }}
   </div>
 </template>
 
 <script>
 import Icon from './Icon'
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-import SfButton from './SfButton.js'
+import CustomComponent from './CustomComponent.js'
 import {
   Blockquote,
   CodeBlock,
@@ -165,11 +166,16 @@ export default {
     EditorMenuBar,
     Icon,
   },
+  computed: {
+    json () {
+      return this.editor.getHTML()
+    }
+  },
   data() {
     return {
       editor: new Editor({
         extensions: [
-          new SfButton(),
+          new CustomComponent(),
           new Blockquote(),
           new BulletList(),
           new CodeBlock(),
@@ -209,7 +215,7 @@ export default {
             <br />
             – mom
           </blockquote>
-          <SfButton>Kijek</SfButton>
+          <CustomComponent>Kijek</CustomComponent>
         `,
       }),
     }

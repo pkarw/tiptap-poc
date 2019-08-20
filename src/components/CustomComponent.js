@@ -1,10 +1,10 @@
 import { Node } from 'tiptap'
-import { SfButton as SfButtonCore } from '@storefrontui/vue'
+import CustomComponentCore from './CustomComponentCore'
 
 export default class SfButton extends Node {
 
   get name() {
-    return 'SfButton'
+    return 'CustomComponent'
   }
 
   get schema() {
@@ -17,15 +17,15 @@ export default class SfButton extends Node {
       group: 'block',
       selectable: false,
       parseDOM: [{
-        tag: 'SfButton'
+        tag: 'CustomComponent'
       }],
-      toDOM: node => ['SfButton', { // attributes
+      toDOM: node => ['CustomComponent', { // attributes
       }],
     }
   }
 
   get view() {
-    return Object.assign(SfButtonCore, {
+    return Object.assign(CustomComponentCore, {
       props: ['node', 'updateAttrs', 'view'],
       computed: {
         src: {
