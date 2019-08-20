@@ -210,7 +210,7 @@ export default {
               With regular items
             </li>
           </ul>
-          <CustomComponent>Kijek</CustomComponent>
+          <custom-component>Kijek</custom-component>
           <blockquote>
             It's amazing 👏
             <br />
