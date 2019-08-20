@@ -15,11 +15,11 @@ export default class SfButton extends Node {
         },
       },
       group: 'block',
-      selectable: false,
+      selectable: true,
       parseDOM: [{
-        tag: 'CustomComponent'
+        tag: 'custom-component'
       }],
-      toDOM: node => ['CustomComponent', { // attributes
+      toDOM: node => ['custom-component', { // attributes
       }],
     }
   }

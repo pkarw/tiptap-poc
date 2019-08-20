@@ -210,12 +210,12 @@ export default {
               With regular items
             </li>
           </ul>
+          <CustomComponent>Kijek</CustomComponent>
           <blockquote>
             It's amazing 👏
             <br />
             – mom
           </blockquote>
-          <CustomComponent>Kijek</CustomComponent>
         `,
       }),
     }

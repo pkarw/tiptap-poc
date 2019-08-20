@@ -1,6 +1,6 @@
 <template>
   <div class="super-component">
-    <strong>Elo Elo</strong> <slot />
+    <strong>Elo <slot></slot>Elo</strong> 
   </div>
 </template>
 
